@@ -3,3 +3,6 @@ node_modules/
 .env
 dist/
 .firebase/
+
+# Local preview tooling (Claude Code launch config + dev server)
+.claude/

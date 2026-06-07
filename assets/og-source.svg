@@ -1,0 +1,13 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#000000"/>
+  <rect x="32" y="32" width="1136" height="566" fill="none" stroke="#D3AF37" stroke-width="2" opacity="0.6"/>
+  <svg x="96" y="185" width="260" height="260" viewBox="1224 1224 7275 7275">
+    <path d="M2430.68 2430.68L4861.36 1423.86L7292.04 2430.68L8298.86 4861.36L7292.04 7292.04L4861.36 8298.86L2430.68 7292.04L1423.86 4861.36L2430.68 2430.68Z" fill="#000000" stroke="#D3AF37" stroke-width="33"/>
+    <path d="M4863.72 1438.71L6074.72 1943.21L7280.22 2443.21L4877.33 4845.8L4863.72 1438.71Z" fill="#D3AF37"/>
+    <path d="M8281.22 4861.71L7284.22 2436.71L4877.32 4845.8L8281.22 4861.71Z" fill="#D9D9D9"/>
+  </svg>
+  <text x="392" y="285" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="76" fill="#FFFFFF" letter-spacing="2">OCTAGON</text>
+  <text x="394" y="330" font-family="Archivo, Arial, sans-serif" font-weight="600" font-size="30" fill="#D3AF37" letter-spacing="14">SOLUTIONS</text>
+  <text x="394" y="400" font-family="Archivo, Arial, sans-serif" font-weight="400" font-size="30" fill="#EAEAEA">The bridge between your company</text>
+  <text x="394" y="440" font-family="Archivo, Arial, sans-serif" font-weight="400" font-size="30" fill="#EAEAEA">and the Brazilian State.</text>
+</svg>

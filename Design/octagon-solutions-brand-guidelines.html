@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Octagon Solutions — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800&family=Cormorant:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#000000; --ink:#1A1A1A; --gold:#D3AF37; --bronze:#856E24;
+    --champagne:#CDBD88; --wedge:#D9D9D9; --paper:#EAEAEA; --white:#FFFFFF;
+    --line:#B4B2A9; --muted:#5F5E5A;
+    --sans:'Archivo',sans-serif; --serif:'Cormorant',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:#0c0c0c;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .doc{max-width:960px;margin:0 auto;background:var(--paper);box-shadow:0 0 80px rgba(0,0,0,.6)}
+  section{padding:72px 80px;position:relative}
+  .band-dark{background:var(--black);color:var(--white)}
+  .eyebrow{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:22px}
+  .band-dark .eyebrow{color:var(--gold)}
+  h2{font-family:var(--sans);font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-.01em;margin-bottom:8px}
+  h3{font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+  p{font-size:15px;color:#33322f}
+  .band-dark p{color:#cfcdc6}
+  .lead{font-size:19px;line-height:1.6;color:#2c2b28;max-width:62ch}
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* COVER */
+  .cover{min-height:560px;display:flex;flex-direction:column;justify-content:space-between;padding:80px}
+  .cover-top{display:flex;justify-content:space-between;align-items:flex-start}
+  .logo-lockup{display:flex;align-items:center;gap:18px}
+  .wordmark{line-height:1}
+  .wordmark .name{font-weight:800;font-size:30px;letter-spacing:.04em;color:var(--white)}
+  .wordmark .sub{font-weight:400;font-size:12px;letter-spacing:.42em;color:var(--gold);margin-top:4px}
+  .sys{ text-align:right;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8a8a86}
+  .sys b{display:block;font-family:var(--serif);font-size:30px;letter-spacing:.06em;color:var(--gold);font-weight:600;text-transform:none;margin-top:6px}
+  .cover-title{font-weight:300;font-size:58px;line-height:1;letter-spacing:-.02em;color:var(--white)}
+  .cover-title b{font-weight:800;display:block}
+  .cover-foot{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #2a2a2a;padding-top:22px}
+  .tagline{font-family:var(--serif);font-size:21px;font-style:italic;color:#dcdac9;max-width:42ch}
+  .tagline span{display:block;font-size:14px;color:#7c7b76;font-style:normal;margin-top:6px}
+
+  /* ESSENCE */
+  .essence-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:34px}
+  .pillar{border-top:2px solid var(--gold);padding-top:16px}
+  .pillar h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px}
+  .pillar p{font-size:14px}
+  .mv{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px;border:1px solid var(--line)}
+  .mv div{padding:24px 26px}
+  .mv div:first-child{border-right:1px solid var(--line)}
+  .mv h4{font-family:var(--serif);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;font-weight:600}
+  .mv p{font-size:15px;color:#2c2b28}
+
+  /* MARK */
+  .mark-row{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+  .mark-tile{aspect-ratio:1.5;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;border-radius:6px;position:relative}
+  .mark-tile.on-black{background:var(--black)}
+  .mark-tile.on-paper{background:var(--paper)}
+  .mark-tile .cap{position:absolute;bottom:12px;left:14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .on-black .cap{color:#7c7b76}.on-paper .cap{color:var(--muted)}
+  .anat{display:grid;grid-template-columns:240px 1fr;gap:34px;align-items:center;margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px}
+  .anat ul{list-style:none}
+  .anat li{font-size:14px;padding:9px 0;border-bottom:1px solid #e3e1d8;display:flex;gap:12px}
+  .anat li:last-child{border-bottom:none}
+  .anat li b{color:var(--bronze);min-width:86px;font-weight:600}
+  .specs{display:flex;gap:46px;margin-top:34px;flex-wrap:wrap}
+  .spec b{font-family:var(--serif);font-size:30px;color:var(--ink);font-weight:600;display:block}
+  .spec span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+  /* MISUSE */
+  .dont-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+  .dont{background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px}
+  .dont .mk{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;margin-bottom:12px;color:#fff}
+  .dont.no .mk{background:#9a2f2f}.dont.yes .mk{background:#3b6d2f}
+  .dont p{font-size:13.5px;color:#3a3935}
+
+  /* COLOUR */
+  .pal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+  .sw{border-radius:8px;overflow:hidden;border:1px solid var(--line);cursor:pointer;transition:transform .18s ease}
+  .sw:hover{transform:translateY(-3px)}
+  .sw .chip{height:96px}
+  .sw .meta{padding:12px 14px;background:#fff}
+  .sw .nm{font-size:13.5px;font-weight:600;color:var(--ink)}
+  .sw .hex{font-family:var(--serif);font-size:14px;color:var(--bronze);letter-spacing:.03em;margin-top:2px}
+  .sw .rgb{font-size:11px;color:var(--muted);margin-top:1px}
+  .sw .use{font-size:11.5px;color:#6c6b66;margin-top:7px;line-height:1.45}
+  .grad-wrap{margin-top:30px}
+  .grad-bar{height:54px;border-radius:8px;border:1px solid var(--line);background:linear-gradient(90deg,#CBAD47,#CDBD88)}
+  .grad-cap{display:flex;justify-content:space-between;margin-top:10px;font-size:12px;color:var(--muted)}
+  .grad-cap b{font-family:var(--serif);color:var(--bronze);font-size:13px}
+  .surface-note{margin-top:26px;background:#fff;border-left:3px solid var(--gold);padding:16px 20px;border-radius:0 6px 6px 0}
+  .surface-note p{font-size:14px;color:#3a3935}
+
+  /* TYPE */
+  .type-spec{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px 32px;margin-top:24px}
+  .type-spec .big-sans{font-weight:800;font-size:46px;letter-spacing:-.01em;color:var(--ink);line-height:1}
+  .type-spec .big-serif{font-family:var(--serif);font-size:40px;font-weight:500;color:var(--ink);font-variant:small-caps;letter-spacing:.04em;line-height:1.1}
+  .type-spec .gloss{font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.02em}
+  .type-spec .row{font-size:13px;color:#6c6b66;margin-top:10px}
+  .scale{margin-top:26px;border-top:1px solid var(--line)}
+  .scale .r{display:flex;align-items:baseline;gap:20px;padding:13px 0;border-bottom:1px solid #ddd9cf}
+  .scale .r .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:90px}
+  .scale .r .sm{font-size:11px;color:#8a897f;margin-left:auto}
+  .principle{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:30px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .principle div{padding:22px 24px;background:#fff}
+  .principle div:first-child{border-right:1px solid var(--line)}
+  .principle .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--bronze);font-weight:600;margin-bottom:6px}
+  .principle .v{font-size:15px;color:#2c2b28}
+
+  /* VOICE */
+  .band-dark h2{color:#fff}
+  .voice-lines{margin-top:30px;display:grid;gap:18px}
+  .vl{border-left:2px solid var(--gold);padding:4px 0 4px 22px}
+  .vl .en{font-family:var(--serif);font-size:24px;font-style:italic;color:#f0eee2}
+  .vl .pt{font-size:14px;color:#9b9a93;margin-top:5px}
+  .traits{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+  .traits span{border:1px solid #333;color:var(--gold);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:8px 16px;border-radius:40px}
+
+  /* APPLICATIONS */
+  .apps{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+  .app{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .app .head{padding:14px 18px;border-bottom:1px solid #e3e1d8;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .app .body{padding:22px;min-height:170px}
+  .letter{background:var(--paper);height:200px;border:1px solid var(--line);border-radius:4px;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+  .letter .lt{display:flex;justify-content:flex-end}
+  .letter .lb{text-align:right;font-family:var(--serif);font-size:10px;color:#444;letter-spacing:.04em;border-top:1px solid var(--line);padding-top:8px}
+  .post{height:200px;border-radius:6px;background:linear-gradient(135deg,#CBAD47,#D8CFBE);padding:22px;display:flex;flex-direction:column;justify-content:center}
+  .post b{font-weight:800;font-size:22px;color:#1a1a1a;line-height:1.05;letter-spacing:-.01em}
+  .post small{font-size:12px;color:#3a3526;margin-top:10px;display:block}
+  .card-mini{height:200px;display:flex;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .card-mini .front{background:var(--black);flex:1;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+  .card-mini .nm{color:#fff;font-weight:700;font-size:14px}.card-mini .rl{color:var(--gold);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+  .card-mini .det{font-family:var(--serif);font-size:10px;color:#cfcdc6;letter-spacing:.03em}
+
+  /* FOOTER */
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+  .foot .fl .name{font-weight:800;font-size:20px;letter-spacing:.04em;color:#fff}
+  .foot .fl .sub{font-size:11px;letter-spacing:.4em;color:var(--gold);margin-top:3px}
+  .foot .fr{text-align:right;font-family:var(--serif);font-size:13px;color:#bdbcb5;line-height:1.8;letter-spacing:.03em;font-variant:small-caps}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;font-size:13px;padding:10px 18px;border-radius:30px;opacity:0;transition:.3s;pointer-events:none;z-index:50}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  @media (max-width:760px){
+    section{padding:48px 28px}.cover{padding:40px 28px}
+    .essence-grid,.mv,.mark-row,.anat,.principle,.apps{grid-template-columns:1fr}
+    .anat{grid-template-columns:1fr}.dont-grid{grid-template-columns:1fr}.pal{grid-template-columns:1fr 1fr}
+    .cover-title{font-size:40px}.mv div:first-child,.principle div:first-child{border-right:none;border-bottom:1px solid var(--line)}
+  }
+  @media print{
+    body{background:#fff}.doc{box-shadow:none;max-width:100%}.reveal{opacity:1;transform:none;animation:none}
+    section{padding:40px 44px;page-break-inside:avoid}.toast{display:none}
+    .sw:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <!-- COVER -->
+  <section class="band-dark cover">
+    <div class="cover-top reveal">
+      <div class="logo-lockup">
+        <svg width="64" height="64" viewBox="0 0 240 240" aria-label="Octagon Solutions mark">
+          <polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="4"/>
+          <polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/>
+          <polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/>
+        </svg>
+        <div class="wordmark"><div class="name">OCTAGON</div><div class="sub">SOLUTIONS</div></div>
+      </div>
+      <div class="sys">Design system<b>Octant</b></div>
+    </div>
+    <div class="cover-title reveal" style="animation-delay:.1s">Brand<b>Guidelines</b></div>
+    <div class="cover-foot reveal" style="animation-delay:.2s">
+      <div class="tagline">The bridge between your company and the Brazilian State.<span>A ponte entre a sua empresa e o Estado brasileiro.</span></div>
+      <div style="font-size:11px;letter-spacing:.2em;color:#6c6b66;text-transform:uppercase">v1 · 2026</div>
+    </div>
+  </section>
+
+  <!-- ESSENCE -->
+  <section>
+    <div class="eyebrow reveal">01 — Brand essence</div>
+    <h2 class="reveal">The form between order and the market.</h2>
+    <p class="lead reveal" style="margin-top:14px">The octagon mediates between the <b>square</b> — order, rules, the institutions of the State — and the <b>circle</b> — continuity, movement, the market. That is exactly where Octagon operates: between the company and the government, translating one into the other.</p>
+    <div class="essence-grid">
+      <div class="pillar reveal"><h4>The bridge</h4><p>Eight sides, eight points of contact with the public sector. We sit at the seam where private enterprise meets public power.</p></div>
+      <div class="pillar reveal" style="animation-delay:.08s"><h4>Eight — prosperity</h4><p>Eight is the number of abundance and of open doors. A firm that opens the way in every direction.</p></div>
+    </div>
+    <div class="mv reveal">
+      <div><h4>Mission</h4><p>Enable companies to sell to the Brazilian public sector — turning regulatory complexity into real market access, with legal certainty.</p></div>
+      <div><h4>Vision</h4><p>A Brazil where the best technology reaches the public sector. Where the State buys from those who build the future.</p></div>
+    </div>
+  </section>
+
+  <!-- THE MARK -->
+  <section>
+    <div class="eyebrow reveal">02 — The mark</div>
+    <h2 class="reveal">One illuminated wedge.</h2>
+    <p class="lead reveal" style="margin-top:14px">The logo is a black octagon with a single highlighted wedge — the <i>octant</i>, the way in — split diagonally into gold and grey: the moment enterprise meets the State.</p>
+    <div class="mark-row">
+      <div class="mark-tile on-black reveal">
+        <svg width="150" height="150" viewBox="0 0 240 240" aria-label="Mark on black">
+          <polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="4"/>
+          <polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/>
+          <polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/>
+        </svg>
+        <span class="cap">Primary · on black</span>
+      </div>
+      <div class="mark-tile on-paper reveal" style="animation-delay:.08s">
+        <svg width="150" height="150" viewBox="0 0 240 240" aria-label="Mark on paper">
+          <polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="4"/>
+          <polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/>
+          <polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/>
+        </svg>
+        <span class="cap">On paper / light</span>
+      </div>
+    </div>
+    <div class="anat reveal">
+      <svg width="220" height="220" viewBox="0 0 240 240" aria-label="Mark construction">
+        <polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="3"/>
+        <polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/>
+        <polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/>
+        <circle cx="120" cy="120" r="3" fill="#fff"/>
+        <line x1="120" y1="120" x2="212.4" y2="81.7" stroke="#fff" stroke-width="1" stroke-dasharray="3 3"/>
+      </svg>
+      <ul>
+        <li><b>Octagon</b> Eight-sided field — order meeting market. Always solid black so the mark reads on any surface.</li>
+        <li><b>Wedge</b> The octant: one section, the entry point. Gold above, grey below.</li>
+        <li><b>Diagonal</b> The split line where the two worlds meet. Gold = enterprise; grey = the institution.</li>
+        <li><b>Edges</b> Gold outline (#D3AF37), consistent across all backgrounds.</li>
+      </ul>
+    </div>
+    <div class="specs">
+      <div class="spec reveal"><b>≥ 1×</b><span>Clear space = wedge width on all sides</span></div>
+      <div class="spec reveal" style="animation-delay:.06s"><b>24px</b><span>Minimum digital size</span></div>
+      <div class="spec reveal" style="animation-delay:.12s"><b>10mm</b><span>Minimum print size</span></div>
+    </div>
+  </section>
+
+  <!-- MISUSE -->
+  <section>
+    <div class="eyebrow reveal">03 — Logo misuse</div>
+    <h2 class="reveal">Protect the mark.</h2>
+    <div class="dont-grid">
+      <div class="dont yes reveal"><div class="mk">✓</div><p>Use the mark in full gold-and-grey on black, paper, or white.</p></div>
+      <div class="dont no reveal" style="animation-delay:.04s"><div class="mk">✕</div><p>Don't recolour the wedge or swap gold for another hue.</p></div>
+      <div class="dont no reveal" style="animation-delay:.08s"><div class="mk">✕</div><p>Don't stretch, skew, or change the octagon's proportions.</p></div>
+      <div class="dont no reveal" style="animation-delay:.12s"><div class="mk">✕</div><p>Don't rotate the mark — the wedge always sits top-right.</p></div>
+      <div class="dont no reveal" style="animation-delay:.16s"><div class="mk">✕</div><p>Don't add shadows, glows, gradients, or outlines to the mark.</p></div>
+      <div class="dont no reveal" style="animation-delay:.2s"><div class="mk">✕</div><p>Don't place the mark on a busy photo or low-contrast field.</p></div>
+    </div>
+  </section>
+
+  <!-- COLOUR -->
+  <section>
+    <div class="eyebrow reveal">04 — Colour</div>
+    <h2 class="reveal">Gold authority, grounded in paper.</h2>
+    <div class="pal">
+      <div class="sw reveal" data-hex="#000000"><div class="chip" style="background:#000"></div><div class="meta"><div class="nm">Octagon Black</div><div class="hex">#000000</div><div class="rgb">0, 0, 0</div><div class="use">Primary surface · hero · headlines</div></div></div>
+      <div class="sw reveal" data-hex="#D3AF37" style="animation-delay:.05s"><div class="chip" style="background:#D3AF37"></div><div class="meta"><div class="nm">Octagon Gold</div><div class="hex">#D3AF37</div><div class="rgb">211, 175, 55</div><div class="use">Brand accent · the wedge · emphasis</div></div></div>
+      <div class="sw reveal" data-hex="#856E24" style="animation-delay:.1s"><div class="chip" style="background:#856E24"></div><div class="meta"><div class="nm">Bronze</div><div class="hex">#856E24</div><div class="rgb">133, 110, 36</div><div class="use">Gold on light · depth · hover states</div></div></div>
+      <div class="sw reveal" data-hex="#CDBD88" style="animation-delay:.15s"><div class="chip" style="background:#CDBD88"></div><div class="meta"><div class="nm">Champagne</div><div class="hex">#CDBD88</div><div class="rgb">205, 189, 136</div><div class="use">Soft gold · gradient tail · subtle fills</div></div></div>
+      <div class="sw reveal" data-hex="#D9D9D9"><div class="chip" style="background:#D9D9D9"></div><div class="meta"><div class="nm">Wedge Grey</div><div class="hex">#D9D9D9</div><div class="rgb">217, 217, 217</div><div class="use">The market half · secondary fills</div></div></div>
+      <div class="sw reveal" data-hex="#EAEAEA" style="animation-delay:.05s"><div class="chip" style="background:#EAEAEA"></div><div class="meta"><div class="nm">Paper Grey</div><div class="hex">#EAEAEA</div><div class="rgb">234, 234, 234</div><div class="use">Document & letterhead background</div></div></div>
+      <div class="sw reveal" data-hex="#FFFFFF" style="animation-delay:.1s"><div class="chip" style="background:#fff;border-bottom:1px solid var(--line)"></div><div class="meta"><div class="nm">Pure White</div><div class="hex">#FFFFFF</div><div class="rgb">255, 255, 255</div><div class="use">Text on dark · breathing space</div></div></div>
+      <div class="sw reveal" data-hex="#1A1A1A" style="animation-delay:.15s"><div class="chip" style="background:#1A1A1A"></div><div class="meta"><div class="nm">Ink</div><div class="hex">#1A1A1A</div><div class="rgb">26, 26, 26</div><div class="use">Body text on light surfaces</div></div></div>
+    </div>
+    <div class="grad-wrap reveal">
+      <div class="grad-bar"></div>
+      <div class="grad-cap"><span>Signature gradient — editorial & social only, never behind body text</span><b>#CBAD47 → #CDBD88</b></div>
+    </div>
+    <div class="surface-note reveal">
+      <p><b>Surface rule.</b> Gold is surface-dependent. It sings on black and quiets on light — so on paper or white, use gold only as a thin accent (rules, edges, small marks) and reach for <b>Bronze</b> when gold text needs to stay legible. Never fill large light areas with gold.</p>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section>
+    <div class="eyebrow reveal">05 — Typography</div>
+    <h2 class="reveal">Two voices, one identity.</h2>
+    <div class="type-spec reveal">
+      <div class="big-sans">OCTAGON SOLUTIONS</div>
+      <div class="gloss">Display — bold geometric sans, often all-caps. The voice of the company: modern, confident, direct.</div>
+      <div class="row">Archivo · weights 400 / 600 / 800 · tracking +0.04em on caps</div>
+    </div>
+    <div class="type-spec reveal" style="animation-delay:.06s">
+      <div class="big-serif">Juiz de Fora · CNPJ 59.876.683/0001-98</div>
+      <div class="gloss">Institutional — small-caps serif. The voice of the State: authoritative, credentialed, refined. Reserved for legal lines, signatures, and details.</div>
+      <div class="row">Cormorant / EB Garamond · small caps · tracking +0.04em</div>
+    </div>
+    <div class="scale reveal">
+      <div class="r"><span class="lbl">Display</span><span style="font-weight:800;font-size:30px">Sell to government</span><span class="sm">Archivo 800 · 34–58px</span></div>
+      <div class="r"><span class="lbl">Heading</span><span style="font-weight:700;font-size:20px">Go-to-government strategy</span><span class="sm">Archivo 700 · 18–24px</span></div>
+      <div class="r"><span class="lbl">Body</span><span style="font-weight:400;font-size:15px">Regulatory complexity, made navigable.</span><span class="sm">Archivo 400 · 15–17px</span></div>
+      <div class="r"><span class="lbl">Detail</span><span style="font-family:var(--serif);font-variant:small-caps;font-size:16px;letter-spacing:.04em">Lei 14.133 · LC 182 · Lei 13.303</span><span class="sm">Cormorant SC · 12–16px</span></div>
+    </div>
+    <div class="principle reveal">
+      <div><div class="k">Sans = the company</div><div class="v">Everything forward-looking and commercial — headlines, web, product, decks.</div></div>
+      <div><div class="k">Serif = the State</div><div class="v">Everything institutional — legal text, credentials, contact lines, formal documents.</div></div>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section class="band-dark">
+    <div class="eyebrow reveal">06 — Voice & tone</div>
+    <h2 class="reveal">Premium, institutional — and reachable.</h2>
+    <p class="reveal" style="margin-top:12px;max-width:60ch">We speak with the authority of someone who knows the law and the warmth of someone who opens doors. Sellable to a startup founder and to a public manager alike. Clear over clever. Bilingual by default.</p>
+    <div class="voice-lines">
+      <div class="vl reveal"><div class="en">We open the doors of the Brazilian State to those who build the future.</div><div class="pt">Abrimos as portas do Estado brasileiro para quem constrói o futuro.</div></div>
+      <div class="vl reveal" style="animation-delay:.08s"><div class="en">The law is not a wall — it is a door.</div><div class="pt">A lei não é um muro — é uma porta.</div></div>
+    </div>
+    <div class="traits">
+      <span class="reveal">Authoritative</span><span class="reveal" style="animation-delay:.04s">Clear</span><span class="reveal" style="animation-delay:.08s">Institutional</span><span class="reveal" style="animation-delay:.12s">Reachable</span><span class="reveal" style="animation-delay:.16s">Bilingual</span>
+    </div>
+  </section>
+
+  <!-- APPLICATIONS -->
+  <section>
+    <div class="eyebrow reveal">07 — Applications</div>
+    <h2 class="reveal">The system in use.</h2>
+    <div class="apps">
+      <div class="app reveal">
+        <div class="head">Letterhead</div>
+        <div class="body">
+          <div class="letter">
+            <div class="lt">
+              <svg width="34" height="34" viewBox="0 0 240 240"><polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="5"/><polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/><polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/></svg>
+            </div>
+            <div class="lb">vitor@octagon.solutions · 32 99807-1878<br>59.876.683/0001-98 · Juiz de Fora — MG</div>
+          </div>
+        </div>
+      </div>
+      <div class="app reveal" style="animation-delay:.06s">
+        <div class="head">Social — gradient</div>
+        <div class="body">
+          <div class="post"><b>CPSI: O ciclo de inovação aberta em 4 etapas</b><small>Octagon Solutions</small></div>
+        </div>
+      </div>
+      <div class="app reveal" style="animation-delay:.12s">
+        <div class="head">Business card</div>
+        <div class="body">
+          <div class="card-mini">
+            <div class="front">
+              <svg width="30" height="30" viewBox="0 0 240 240"><polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="6"/><polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/><polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/></svg>
+              <div><div class="nm">Vitor Carrão</div><div class="rl">Founder</div><div class="det" style="margin-top:8px">vitor@octagon.solutions</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="app reveal" style="animation-delay:.18s">
+        <div class="head">Web — hero</div>
+        <div class="body">
+          <div style="height:200px;background:#000;border-radius:6px;padding:24px;display:flex;flex-direction:column;justify-content:center">
+            <div style="color:#fff;font-weight:800;font-size:24px;line-height:1.05">Sell to the Brazilian<br>government.</div>
+            <div style="color:var(--gold);font-size:12px;letter-spacing:.06em;margin-top:12px;font-family:var(--serif);font-variant:small-caps">Lei 14.133 · LC 182 · Lei 13.303</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="band-dark">
+    <div class="foot">
+      <div class="fl">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:6px">
+          <svg width="40" height="40" viewBox="0 0 240 240"><polygon points="212.4,158.3 158.3,212.4 81.7,212.4 27.6,158.3 27.6,81.7 81.7,27.6 158.3,27.6 212.4,81.7" fill="#000" stroke="#D3AF37" stroke-width="5"/><polygon points="120,120 158.3,27.6 212.4,81.7" fill="#D3AF37"/><polygon points="120,120 212.4,81.7 212.4,158.3" fill="#D9D9D9"/></svg>
+          <div><div class="name">OCTAGON</div><div class="sub">SOLUTIONS</div></div>
+        </div>
+      </div>
+      <div class="fr">vitor@octagon.solutions<br>32 99807-1878<br>59.876.683/0001-98<br>Juiz de Fora — MG</div>
+    </div>
+  </section>
+
+</div>
+<div class="toast" id="toast">Copied</div>
+<script>
+  document.querySelectorAll('.sw').forEach(function(s){
+    s.addEventListener('click',function(){
+      var h=s.getAttribute('data-hex');
+      navigator.clipboard&&navigator.clipboard.writeText(h);
+      var t=document.getElementById('toast');t.textContent=h+' copied';t.classList.add('on');
+      setTimeout(function(){t.classList.remove('on')},1300);
+    });
+  });
+</script>
+</body>
+</html>
