@@ -30,6 +30,10 @@ const I18N = {
       "Habilitamos empresas a vender para o governo brasileiro — transformando a complexidade regulatória em acesso real ao mercado público.",
     "hero.ctaPrimary": "Agende uma conversa",
     "hero.ctaSecondary": "O que fazemos",
+    "hero.meta": "Lei 14.133 · LC 182 · Lei 13.303 · Inexigibilidade",
+
+    /* ---- Accessibility ---- */
+    "a11y.skip": "Pular para o conteúdo",
 
     /* ---- The challenge ---- */
     "challenge.eyebrow": "O desafio",
@@ -163,6 +167,10 @@ const I18N = {
       "We enable companies to sell to the Brazilian government — turning regulatory complexity into real access to the public market.",
     "hero.ctaPrimary": "Book a conversation",
     "hero.ctaSecondary": "What we do",
+    "hero.meta": "Law 14.133 · LC 182 · Law 13.303 · Inexigibility",
+
+    /* ---- Accessibility ---- */
+    "a11y.skip": "Skip to content",
 
     /* ---- The challenge ---- */
     "challenge.eyebrow": "The challenge",
